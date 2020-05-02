@@ -32,7 +32,7 @@
             <input class="form-control form-control-lg  col-sm-10 " type="text" placeholder="event" id="9AM"
                 style="height: 100px; background-color: lightgreen">
             <div class="col-sm-1 btn btn-primary btn btn-primary" id="press9">
-                <i class="fas fa-calendar"></i>
+                <i class="fas fa-save"></i>
             </div>
 
         </div>
@@ -44,7 +44,7 @@
             <input class="form-control form-control-lg  col-sm-10 " type="text" placeholder="event" id="10AM"
                 style="height: 100px; background-color: lightgreen">
             <div class="col-sm-1 btn btn-primary btn btn-primary" id="press10">
-                <i class="fas fa-calendar"></i>
+                <i class="fas fa-save"></i>
             </div>
 
         </div>
@@ -56,7 +56,7 @@
             <input class="form-control form-control-lg  col-sm-10 " type="text" placeholder="event" id="11AM"
                 style="height: 100px; background-color: lightgreen">
             <div class="col-sm-1 btn btn-primary btn btn-primary" id="press11">
-                <i class="fas fa-calendar"></i>
+                <i class="fas fa-save"></i>
             </div>
 
         </div>
@@ -68,7 +68,7 @@
             <input class="form-control form-control-lg  col-sm-10 " type="text" placeholder="event" id="12PM"
                 style="height: 100px; background-color: lightgreen">
             <div class="col-sm-1 btn btn-primary btn btn-primary" id="press12">
-                <i class="fas fa-calendar"></i>
+                <i class="fas fa-save"></i>
             </div>
 
         </div>
@@ -80,9 +80,8 @@
             <input class="form-control form-control-lg  col-sm-10 " type="text" placeholder="event" id="1PM"
                 style="height: 100px; background-color: lightgreen">
             <div class="col-sm-1 btn btn-primary btn btn-primary" id="press1">
-                <i class="fas fa-calendar"></i>
+                <i class="fas fa-save"></i>
             </div>
-
         </div>
         <div class="row">
             <div class="col-sm-1">
@@ -92,9 +91,9 @@
             <input class="form-control form-control-lg  col-sm-10 " type="text" placeholder="event" id="2PM"
                 style="height: 100px; background-color: lightgreen">
             <div class="col-sm-1 btn btn-primary btn btn-primary" id="press2">
-                <i class="fas fa-calendar"></i>
-            </div>
+                <i class="fas fa-save"></i>
         </div>
+    </div>
         <div class="row">
             <div class="col-sm-1">
 
@@ -103,9 +102,9 @@
             <input class="form-control form-control-lg  col-sm-10 " type="text" placeholder="event" id="3PM"
                 style="height: 100px; background-color: lightgreen">
             <div class="col-sm-1 btn btn-primary btn btn-primary" id="press3">
-                <i class="fas fa-calendar"></i>
-            </div>
+                <i class="fas fa-save"></i>
         </div>
+    </div>
         <div class="row">
             <div class="col-sm-1">
 
@@ -114,7 +113,7 @@
             <input class="form-control form-control-lg  col-sm-10 " type="text" placeholder="event" id="4PM"
                 style="height: 100px; background-color: lightgreen">
             <div class="col-sm-1 btn btn-primary btn btn-primary" id="press4">
-                <i class="fas fa-calendar"></i>
+                <i class="fas fa-save"></i>
             </div>
         </div>
         <div class="row">
@@ -125,7 +124,7 @@
             <input class="form-control form-control-lg  col-sm-10 " type="text" placeholder="event" id="5PM"
                 style="height: 100px; background-color: lightgreen">
             <div class="col-sm-1 btn btn-primary btn btn-primary" id="press5">
-                <i class="fas fa-calendar"></i>
+                <i class="fas fa-save"></i>
             </div>
         </div>
         <div class="row">
@@ -136,9 +135,9 @@
             <input class="form-control form-control-lg  col-sm-10 " type="text" placeholder="event" id="6PM"
                 style="height: 100px; background-color: lightgreen">
             <div class="col-sm-1 btn btn-primary btn btn-primary" id="press6">
-                <i class="fas fa-calendar"></i>
+                <i class="fas fa-save"></i>
             </div>
-        </div>
+       
         <input type="text">
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
@@ -150,58 +149,56 @@
             document.getElementById("actualNow").innerHTML = moment().format('h:mm:ss a');
 
             var currentDate = moment().format('MM DD YYYY')
-            
-            // var buttonLd = ["press9", "press10", "press11", "press12", "press1", "press2", "press3", "press4", "press5", "press6" 
-            // ]
 
-            // var timeArr = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM"]
-           
+
             //Save data
-            var submitBtn, submitBtn2,  submitBtn3, submitBtn4, submitBtn5, submitBtn6, submitBtn7, submitBtn8, submitBtn9, submitBtn10;
-            textInput = document.getElementById("9AM")
-            submitBtn = document.getElementById("press9");
-            submitBtn.addEventListener("click", contentStorage) 
-           
-            textInput1 = document.getElementById("10AM")
+            var submitBtn, submitBtn2, submitBtn3, submitBtn4, submitBtn5, submitBtn6, submitBtn7, submitBtn8,
+                submitBtn9, submitBtn10;
+            textInput1 = document.getElementById("9AM")
+            submitBtn1 = document.getElementById("press9");
+            submitBtn1.addEventListener("click", contentStorage)
+
+            textInput2 = document.getElementById("10AM")
             submitBtn2 = document.getElementById("press10");
-            submitBtn2.addEventListener("click", contentStorage) 
+            submitBtn2.addEventListener("click", contentStorage)
 
-            textInput2 = document.getElementById("11AM")
+            textInput3 = document.getElementById("11AM")
             submitBtn3 = document.getElementById("press11");
-            submitBtn3.addEventListener("click", contentStorage) 
+            submitBtn3.addEventListener("click", contentStorage)
 
-            textInput3 = document.getElementById("12PM")
+            textInput4 = document.getElementById("12PM")
             submitBtn4 = document.getElementById("press12");
-            submitBtn4.addEventListener("click", contentStorage) 
+            submitBtn4.addEventListener("click", contentStorage)
 
-            textInput4 = document.getElementById("1PM")
+            textInput5 = document.getElementById("1PM")
             submitBtn5 = document.getElementById("press1");
-            submitBtn5.addEventListener("click", contentStorage) 
-        
-            textInput5 = document.getElementById("2PM")
+            submitBtn5.addEventListener("click", contentStorage)
+
+            textInput6 = document.getElementById("2PM")
             submitBtn6 = document.getElementById("press2");
-            submitBtn6.addEventListener("click", contentStorage) 
+            submitBtn6.addEventListener("click", contentStorage)
 
-            textInput6 = document.getElementById("3PM")
+            textInput7 = document.getElementById("3PM")
             submitBtn7 = document.getElementById("press3");
-            submitBtn7.addEventListener("click", contentStorage) 
+            submitBtn7.addEventListener("click", contentStorage)
 
-            textInput7 = document.getElementById("4PM")
+            textInput8 = document.getElementById("4PM")
             submitBtn8 = document.getElementById("press4");
-            submitBtn8.addEventListener("click", contentStorage) 
+            submitBtn8.addEventListener("click", contentStorage)
 
-            textInput8 = document.getElementById("5PM")
+            textInput9= document.getElementById("5PM")
             submitBtn9 = document.getElementById("press5");
-            submitBtn9.addEventListener("click", contentStorage) 
+            submitBtn9.addEventListener("click", contentStorage)
 
-            textInput9 = document.getElementById("6PM")
+            textInput10 = document.getElementById("6PM")
             submitBtn10 = document.getElementById("press6");
-            submitBtn10.addEventListener("click", contentStorage) 
-            
+            submitBtn10.addEventListener("click", contentStorage)
+
             //Color change
             let schedulerTime;
+
             function changeColor() {
-                schedulerTime = "09:00:00 am"; 
+                schedulerTime = "09:00:00 am";
                 if (schedulerTime === now) {
                     document.getElementById("9AM").style.backgroundColor = "red";
                 } else if (schedulerTime > now) {
@@ -264,37 +261,67 @@
                 }
             }
             changeColor();
-             
+
             var timeArr = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM"]
+
             function contentStorage() {
-                if (typeof (Storage) !== "undefined") {
-                    console.log("textInput :" + textInput.value)
+                if (typeof(Storage) !== "undefined" ) {
+                    console.log("textInput1 :" + textInput1.value)
                     // Store
-                    localStorage.setItem("9AM", textInput.value);
-                    localStorage.setItem("10AM", textInput1.value);
-                    localStorage.setItem("11AM", textInput2.value);
-                    localStorage.setItem("12PM", textInput3.value);
-                    localStorage.setItem("1PM", textInput4.value);
-                    localStorage.setItem("2PM", textInput5.value);
-                    localStorage.setItem("3PM", textInput6.value);
-                    localStorage.setItem("4PM", textInput7.value);
-                    localStorage.setItem("5PM", textInput8.value);
-                    localStorage.setItem("6PM", textInput9.value);
-                    var getInits;
-                     getInits += localStorage.getItem("9AM")
-                     getInits += localStorage.getItem("10AM")
-                     getInits += localStorage.getItem("11AM")
-                     getInits += localStorage.getItem("12PM")
-                     getInits += localStorage.getItem("1PM")
-                     getInits += localStorage.getItem("2PM")
-                     getInits += localStorage.getItem("3PM")
-                     getInits += localStorage.getItem("4PM")
-                     getInits += localStorage.getItem("5PM")
-                     getInits += localStorage.getItem("6PM")
+                    localStorage.setItem("9AM", textInput1.value) 
+                    localStorage.setItem("10AM", textInput2.value);
+                    localStorage.setItem("11AM", textInput3.value);
+                    localStorage.setItem("12PM", textInput4.value);
+                    localStorage.setItem("1PM", textInput5.value);
+                    localStorage.setItem("2PM", textInput6.value);
+                    localStorage.setItem("3PM", textInput7.value);
+                    localStorage.setItem("4PM", textInput8.value);
+                    localStorage.setItem("5PM", textInput9.value);
+                    localStorage.setItem("6PM", textInput10.value);
+                  
                 } else {
                     document.getElementById(inputBtn).innerHTML =
                         "Sorry, your browser does not support Web Storage...";
                 }
+               
+            }
+
+            window.onload = function () {
+
+                    let getInits1 = localStorage.getItem("9AM")
+                    let getInits2 = localStorage.getItem("10AM")
+                    let getInits3 = localStorage.getItem("11AM")
+                    let getInits4 = localStorage.getItem("12PM")
+                    let getInits5 = localStorage.getItem("1PM")
+                    let getInits6 = localStorage.getItem("2PM")
+                    let getInits7 = localStorage.getItem("3PM")
+                    let getInits8 = localStorage.getItem("4PM")
+                    let getInits9 = localStorage.getItem("5PM")
+                    let getInits10 = localStorage.getItem("6PM")
+                
+
+                    if (getInits1 !== undefined) $(textInput1).val(getInits1);
+                    if (getInits2 !== undefined) $(textInput2).val(getInits2);
+                    if (getInits3 !== undefined) $(textInput3).val(getInits3);
+                    if (getInits4 !== undefined) $(textInput4).val(getInits4);
+                    if (getInits5 !== undefined) $(textInput5).val(getInits5);
+                    if (getInits6 !== undefined) $(textInput6).val(getInits6);
+                    if (getInits7 !== undefined) $(textInput7).val(getInits7);
+                    if (getInits8 !== undefined) $(textInput8).val(getInits8);
+                    if (getInits9 !== undefined) $(textInput9).val(getInits9);
+                    if (getInits10 !== undefined) $(textInput10).val(getInits10);
+                    
+                 
+                   if (getInits1 !== null) $(textInput1).val(getInits1);
+                   if (getInits2 !== null) $(textInput2).val(getInits2);
+                   if (getInits3 !== null) $(textInput3).val(getInits3);
+                   if (getInits4 !== null) $(textInput4).val(getInits4);
+                   if (getInits5 !== null) $(textInput5).val(getInits5);
+                   if (getInits6 !== null) $(textInput6).val(getInits6);
+                   if (getInits7 !== null) $(textInput7).val(getInits7);
+                   if (getInits8 !== null) $(textInput8).val(getInits8);
+                   if (getInits9 !== null) $(textInput9).val(getInits9);
+                   if (getInits10 !== null) $(textInput10).val(getInits10);
             }
         </script>
 </body>
