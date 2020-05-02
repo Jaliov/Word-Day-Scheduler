@@ -27,7 +27,7 @@
         <div class="row">
             <div class="col-sm-1">
 
-                <h5>9AM</h5>
+                <h5 class = 'text-light'>9AM</h5>
             </div>
             <input class="form-control form-control-lg  col-sm-10 " type="text" placeholder="event" id="9AM"
                 style="height: 100px; background-color: lightgreen">
@@ -39,7 +39,7 @@
         <div class="row">
             <div class="col-sm-1">
 
-                <h5>10AM</h5>
+                <h5 class = 'text-light'>10AM</h5>
             </div>
             <input class="form-control form-control-lg  col-sm-10 " type="text" placeholder="event" id="10AM"
                 style="height: 100px; background-color: lightgreen">
@@ -51,7 +51,7 @@
         <div class="row">
             <div class="col-sm-1">
 
-                <h5>11AM</h5>
+                <h5 class = 'text-light'>11AM</h5>
             </div>
             <input class="form-control form-control-lg  col-sm-10 " type="text" placeholder="event" id="11AM"
                 style="height: 100px; background-color: lightgreen">
@@ -63,7 +63,7 @@
         <div class="row">
             <div class="col-sm-1">
 
-                <h5>12PM</h5>
+                <h5 class = 'text-light'>12PM</h5>
             </div>
             <input class="form-control form-control-lg  col-sm-10 " type="text" placeholder="event" id="12PM"
                 style="height: 100px; background-color: lightgreen">
@@ -75,7 +75,7 @@
         <div class="row">
             <div class="col-sm-1">
 
-                <h5>1PM</h5>
+                <h5 class = 'text-light'>1PM</h5>
             </div>
             <input class="form-control form-control-lg  col-sm-10 " type="text" placeholder="event" id="1PM"
                 style="height: 100px; background-color: lightgreen">
@@ -86,7 +86,7 @@
         <div class="row">
             <div class="col-sm-1">
 
-                <h5>2PM</h5>
+                <h5 class = 'text-light'>2PM</h5>
             </div>
             <input class="form-control form-control-lg  col-sm-10 " type="text" placeholder="event" id="2PM"
                 style="height: 100px; background-color: lightgreen">
@@ -97,7 +97,7 @@
         <div class="row">
             <div class="col-sm-1">
 
-                <h5>3PM</h5>
+                <h5 class = 'text-light'>3PM</h5>
             </div>
             <input class="form-control form-control-lg  col-sm-10 " type="text" placeholder="event" id="3PM"
                 style="height: 100px; background-color: lightgreen">
@@ -108,7 +108,7 @@
         <div class="row">
             <div class="col-sm-1">
 
-                <h5>4PM</h5>
+                <h5 class = 'text-light'>4PM</h5>
             </div>
             <input class="form-control form-control-lg  col-sm-10 " type="text" placeholder="event" id="4PM"
                 style="height: 100px; background-color: lightgreen">
@@ -119,7 +119,7 @@
         <div class="row">
             <div class="col-sm-1">
 
-                <h5>5PM</h5>
+                <h5 class = 'text-light'>5PM</h5>
             </div>
             <input class="form-control form-control-lg  col-sm-10 " type="text" placeholder="event" id="5PM"
                 style="height: 100px; background-color: lightgreen">
@@ -130,15 +130,14 @@
         <div class="row">
             <div class="col-sm-1">
 
-                <h5>6PM</h5>
+                <h5 class = 'text-light'>6PM</h5>
             </div>
             <input class="form-control form-control-lg  col-sm-10 " type="text" placeholder="event" id="6PM"
                 style="height: 100px; background-color: lightgreen">
             <div class="col-sm-1 btn btn-primary btn btn-primary" id="press6">
                 <i class="fas fa-save"></i>
             </div>
-       
-        <input type="text">
+    
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
         <!--<script src="moment.js"></script>-->
@@ -150,11 +149,16 @@
 
             var currentDate = moment().format('MM DD YYYY')
 
+            var txtIndex= 0;
+            var textInput = [];
+            textInput.push(++txtIndex)
+            textInput.push(++txtIndex)
+            console.log(textInput)
 
             //Save data
-            var submitBtn, submitBtn2, submitBtn3, submitBtn4, submitBtn5, submitBtn6, submitBtn7, submitBtn8,
+            var submitBtn1, submitBtn2, submitBtn3, submitBtn4, submitBtn5, submitBtn6, submitBtn7, submitBtn8,
                 submitBtn9, submitBtn10;
-            textInput1 = document.getElementById("9AM")
+            let textInput1 = document.getElementById("9AM")
             submitBtn1 = document.getElementById("press9");
             submitBtn1.addEventListener("click", contentStorage)
 
@@ -200,7 +204,7 @@
             function changeColor() {
                 schedulerTime = "09:00:00 am";
                 if (schedulerTime === now) {
-                    document.getElementById("9AM").style.backgroundColor = "red";
+                    document.getElementById("9AM").style.backgroundColor = "red"; 
                 } else if (schedulerTime > now) {
                     document.getElementById("9AM").style.backgroundColor = "lightgrey";
                 }
