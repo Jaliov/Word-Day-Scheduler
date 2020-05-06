@@ -24,6 +24,8 @@ When you refresh the page, the saved events persist.
 - JavaScript
 - jQuery
 
+### Deployment: https://jaliov.github.io/Word-Day-Scheduler/
+
 
 
 
